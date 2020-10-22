@@ -2,7 +2,7 @@ import React from 'react';
 import { Text, View, Image } from 'react-native';
 
 const logoSource = './images/bee.png';
-const frenchPink = '#FF5D8F'
+const frenchPink = '#FF5D8F';
 
 const SplashScreen = () => {
     return (
