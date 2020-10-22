@@ -6,31 +6,39 @@ import { createDrawerNavigator } from '@react-navigation/drawer';
 
 //Fonts
 import { useFonts, Pacifico_400Regular } from '@expo-google-fonts/pacifico';
-import { Merriweather_400Regular } from '@expo-google-fonts/merriweather';
+import { Merriweather_400Regular, Merriweather_900Black } from '@expo-google-fonts/merriweather';
 
 import SplashScreen from './SplashScreen';
 import Home from './HomeComponent';
 
 const Stack = createStackNavigator();
 const Drawer = createDrawerNavigator();
+
 const frenchPink = '#FF5D8F';
+const amethyst = '#A572D5';
+const pinkHalf = '#FF5D8F40';
+const light = '#EBF0FF';
+
 const titleFont = 'Pacifico_400Regular';
 const regularFont = 'Merriweather_400Regular';
+const blackFont = 'Merriweather_900Black'
+
+const HeaderOptions = {
+    headerStyle: {
+        backgroundColor: frenchPink
+    },
+    headerTintColor: "#fff",
+    headerTitleStyle: {
+        color: "#fff",
+        fontFamily: titleFont
+    }
+};
 
 function HomeScreen({ navigation }) {
     return (
         <Stack.Navigator
             initialRouteName="Home"
-            screenOptions={{
-                headerStyle: {
-                    backgroundColor: frenchPink
-                },
-                headerTintColor: "#fff",
-                headerTitleStyle: {
-                    color: "#fff",
-                    fontFamily: 'Pacifico_400Regular'
-                }
-            }}
+            screenOptions={HeaderOptions}
         >
             <Stack.Screen
                 name="Home"
@@ -45,7 +53,8 @@ const Main = () => {
 
     let [fontsLoaded] = useFonts({
         Pacifico_400Regular,
-        Merriweather_400Regular
+        Merriweather_400Regular,
+        Merriweather_900Black
     });
 
     if (!fontsLoaded) {
@@ -53,8 +62,23 @@ const Main = () => {
     } else {
         return (
             <NavigationContainer>
-                <Drawer.Navigator initialRouteName="Home">
-                    <Drawer.Screen name="Home" component={HomeScreen} />
+                <Drawer.Navigator
+                    initialRouteName="Home"
+                    drawerStyle={{
+                        backgroundColor: '#fff'
+                    }}
+                    drawerContentOptions={{
+                        activeBackgroundColor: pinkHalf,
+                        activeTintColor: amethyst
+                    }}
+                >
+                    <Drawer.Screen
+                        name="Home"
+                        component={HomeScreen}
+                        options={{
+                            title: 'Inicio'
+                        }}
+                    />
                 </Drawer.Navigator>
             </NavigationContainer>
         );
