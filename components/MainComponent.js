@@ -4,6 +4,9 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 
+//Fonts
+import { useFonts, Pacifico_400Regular } from '@expo-google-fonts/pacifico';
+import { Merriweather_400Regular } from '@expo-google-fonts/merriweather';
 
 import SplashScreen from './SplashScreen';
 import Home from './HomeComponent';
@@ -11,6 +14,8 @@ import Home from './HomeComponent';
 const Stack = createStackNavigator();
 const Drawer = createDrawerNavigator();
 const frenchPink = '#FF5D8F';
+const titleFont = 'Pacifico_400Regular';
+const regularFont = 'Merriweather_400Regular';
 
 function HomeScreen({ navigation }) {
     return (
@@ -22,7 +27,8 @@ function HomeScreen({ navigation }) {
                 },
                 headerTintColor: "#fff",
                 headerTitleStyle: {
-                    color: "#fff"
+                    color: "#fff",
+                    fontFamily: 'Pacifico_400Regular'
                 }
             }}
         >
@@ -35,16 +41,24 @@ function HomeScreen({ navigation }) {
     );
 }
 
-export default class Main extends React.Component {
+const Main = () => {
 
-    render() {
+    let [fontsLoaded] = useFonts({
+        Pacifico_400Regular,
+        Merriweather_400Regular
+    });
 
+    if (!fontsLoaded) {
+        return <SplashScreen />
+    } else {
         return (
             <NavigationContainer>
                 <Drawer.Navigator initialRouteName="Home">
-                    <Drawer.Screen name="Home" component={HomeScreen}/>
+                    <Drawer.Screen name="Home" component={HomeScreen} />
                 </Drawer.Navigator>
             </NavigationContainer>
         );
     }
 }
+
+export default Main;
