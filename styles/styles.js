@@ -4,7 +4,7 @@ import { StyleSheet } from 'react-native';
 export const colors = {
     pink_dark: '#FF5D8F',
     pink_light: '#FFC4D6',
-    half_pink: '#FF5D8F40',
+    half_pink: '#FF5D8F70',
     purple: '#A572D5',
     blue: '#99FFFA',
     yellow: '#FFF185',
@@ -17,7 +17,7 @@ export const values = {
     font_title: "Pacifico_400Regular",
     font_body: "Merriweather_400Regular",
     font_body_bold: "Merriweather_900Black",
-    font_body_size: 14,
+    font_body_size: 16,
     font_title_size: 24
 };
 
@@ -29,25 +29,26 @@ export const screenHeader = {
     headerStyle: {
         backgroundColor: colors.pink_dark
     },
-    headerTintColor: "#fff",
+    headerTintColor: colors.light,
     headerTitleStyle: {
-        color: "#fff",
+        color: colors.light,
         fontFamily: values.font_title
     }
 };
 
 export const drawer = {
     style: {
-        backgroundColor: '#fff'
+        backgroundColor: colors.pink_light
     },
     contentOptions: {
-        activeBackgroundColor: colors.half_pink,
-        activeTintColor: colors.purple
-    },
-    // style object for text style
-    labelStyle: {
-        fontFamily: values.font_body_bold,
-        fontSize: values.font_body_size
+        activeBackgroundColor: colors.light,
+        activeTintColor: colors.purple,
+        inactiveTintColor: colors.light,
+        labelStyle: {
+            fontFamily: values.font_body_bold,
+            fontSize: 16,
+            marginLeft: 10
+        }
     }
 }
 

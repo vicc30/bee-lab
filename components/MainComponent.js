@@ -45,9 +45,8 @@ const Main = () => {
             <NavigationContainer>
                 <Drawer.Navigator
                     initialRouteName="Home"
-                    drawerStyle = {Styles.drawer.style}
-                    drawerContentOptions = {Styles.drawer.contentOptions}
-                    labelStyle = {Styles.drawer.labelStyle}
+                    drawerStyle={Styles.drawer.style}
+                    drawerContentOptions={Styles.drawer.contentOptions}
                 >
                     <Drawer.Screen
                         name="Home"
