@@ -38,6 +38,9 @@ export const screenHeader = {
 };
 
 export const drawer = {
+    container: {
+        flex: 1,
+    },
     style: {
         backgroundColor: colors.pink_light
     },
@@ -50,7 +53,29 @@ export const drawer = {
             fontSize: values.font_body_size,
             marginLeft: 10
         }
-    }
+    },
+    drawerImage: {
+        margin: 20,
+        width: 90,
+        height: 90
+    },
+    drawerHeaderText: {
+        color: colors.purple,
+        fontSize: values.font_title_size,
+        fontWeight: 'bold',
+        margin: 20
+    },
+    margin: {
+        marginLeft: 15
+    },
+    drawerHeader: {
+        backgroundColor: colors.pink_light,
+        height: 90,
+        alignItems: 'center',
+        justifyContent: 'center',
+        flex: 1,
+        flexDirection: 'row'
+    },
 }
 
 export const splash = {
