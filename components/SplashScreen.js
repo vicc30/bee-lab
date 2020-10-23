@@ -1,5 +1,6 @@
 import React from 'react';
 import { Text, View, Image } from 'react-native';
+import * as Styles from '../styles/styles';
 
 const logoSource = '../assets/images/bee.png';
 const frenchPink = '#FF5D8F';
@@ -7,15 +8,10 @@ const frenchPink = '#FF5D8F';
 const SplashScreen = () => {
     return (
         <View
-            style={{
-                flex: 1,
-                justifyContent: "center",
-                alignItems: "center",
-                backgroundColor: frenchPink
-            }}>
+            style={Styles.splash.component}>
             <Image
                 source={require(logoSource)}
-                style={{ width: 150, height: 150 }}
+                style={Styles.splash.icon}
             />
         </View>
     );

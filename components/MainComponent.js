@@ -4,9 +4,10 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 
-//Fonts
 import { useFonts, Pacifico_400Regular } from '@expo-google-fonts/pacifico';
 import { Merriweather_400Regular, Merriweather_900Black } from '@expo-google-fonts/merriweather';
+
+import * as Styles from '../styles/styles';
 
 import SplashScreen from './SplashScreen';
 import Home from './HomeComponent';
@@ -14,31 +15,11 @@ import Home from './HomeComponent';
 const Stack = createStackNavigator();
 const Drawer = createDrawerNavigator();
 
-const frenchPink = '#FF5D8F';
-const amethyst = '#A572D5';
-const pinkHalf = '#FF5D8F40';
-const light = '#EBF0FF';
-
-const titleFont = 'Pacifico_400Regular';
-const regularFont = 'Merriweather_400Regular';
-const blackFont = 'Merriweather_900Black'
-
-const HeaderOptions = {
-    headerStyle: {
-        backgroundColor: frenchPink
-    },
-    headerTintColor: "#fff",
-    headerTitleStyle: {
-        color: "#fff",
-        fontFamily: titleFont
-    }
-};
-
 function HomeScreen({ navigation }) {
     return (
         <Stack.Navigator
             initialRouteName="Home"
-            screenOptions={HeaderOptions}
+            screenOptions={Styles.screenHeader}
         >
             <Stack.Screen
                 name="Home"
@@ -64,13 +45,9 @@ const Main = () => {
             <NavigationContainer>
                 <Drawer.Navigator
                     initialRouteName="Home"
-                    drawerStyle={{
-                        backgroundColor: '#fff'
-                    }}
-                    drawerContentOptions={{
-                        activeBackgroundColor: pinkHalf,
-                        activeTintColor: amethyst
-                    }}
+                    drawerStyle = {Styles.drawer.style}
+                    drawerContentOptions = {Styles.drawer.contentOptions}
+                    labelStyle = {Styles.drawer.labelStyle}
                 >
                     <Drawer.Screen
                         name="Home"
