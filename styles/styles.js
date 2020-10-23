@@ -18,7 +18,7 @@ export const values = {
     font_body: "Merriweather_400Regular",
     font_body_bold: "Merriweather_900Black",
     font_body_size: 16,
-    font_title_size: 24
+    font_title_size: 26
 };
 
 export const global = StyleSheet.create({
@@ -32,7 +32,8 @@ export const screenHeader = {
     headerTintColor: colors.light,
     headerTitleStyle: {
         color: colors.light,
-        fontFamily: values.font_title
+        fontFamily: values.font_title,
+        fontSize: values.font_title_size
     }
 };
 
@@ -43,10 +44,10 @@ export const drawer = {
     contentOptions: {
         activeBackgroundColor: colors.light,
         activeTintColor: colors.purple,
-        inactiveTintColor: colors.light,
+        inactiveTintColor: colors.pink_dark,
         labelStyle: {
             fontFamily: values.font_body_bold,
-            fontSize: 16,
+            fontSize: values.font_body_size,
             marginLeft: 10
         }
     }
