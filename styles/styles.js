@@ -17,7 +17,7 @@ export const values = {
     font_title: "Pacifico_400Regular",
     font_body: "Merriweather_400Regular",
     font_body_bold: "Merriweather_900Black",
-    font_body_size: 16,
+    font_body_size: 14,
     font_title_size: 26
 };
 

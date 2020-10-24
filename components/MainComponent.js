@@ -13,6 +13,7 @@ import { Merriweather_400Regular, Merriweather_900Black } from '@expo-google-fon
 import * as Styles from '../styles/styles';
 
 import SplashScreen from './SplashScreen';
+import Cart from './CartComponent';
 import Login from './LoginComponent';
 import Home from './HomeComponent';
 import SkinCare from './SkinCareComponent';
@@ -34,7 +35,7 @@ const CustomDrawerContentComponent = (props) => (
                 <View style={{ flex: 1 }}>
                     <Image source={require('../assets/images/bee.png')} style={Styles.drawer.drawerImage} />
                 </View>
-                <View style={{ flex: 2, marginLeft: 30}}>
+                <View style={{ flex: 2, marginLeft: 30 }}>
                     <Text style={Styles.drawer.drawerHeaderText}>Bee Lab</Text>
                 </View>
             </View>
@@ -62,7 +63,24 @@ function LoginScreen({ navigation }) {
                             containerStyle={Styles.drawer.margin}
                             onPress={() => navigation.toggleDrawer()}
                         />
+                    ),
+                    headerRight: () => (
+                        <Icon
+                            name="shopping-cart"
+                            type="font-awesome-5"
+                            size={Styles.values.font_title_size}
+                            color={Styles.colors.light}
+                            containerStyle={{ marginRight: 15 }}
+                            onPress={() => navigation.navigate('Cart')}
+                        />
                     )
+                }}
+            />
+            <Stack.Screen
+                name="Cart"
+                component={Cart}
+                options={{
+                    title: 'Carrito de Compras'
                 }}
             />
         </Stack.Navigator>
@@ -88,7 +106,24 @@ function HomeScreen({ navigation }) {
                             containerStyle={Styles.drawer.margin}
                             onPress={() => navigation.toggleDrawer()}
                         />
+                    ),
+                    headerRight: () => (
+                        <Icon
+                            name="shopping-cart"
+                            type="font-awesome-5"
+                            size={Styles.values.font_title_size}
+                            color={Styles.colors.light}
+                            containerStyle={{ marginRight: 15 }}
+                            onPress={() => navigation.navigate('Cart')}
+                        />
                     )
+                }}
+            />
+            <Stack.Screen
+                name="Cart"
+                component={Cart}
+                options={{
+                    title: 'Carrito de Compras'
                 }}
             />
         </Stack.Navigator>
@@ -114,7 +149,24 @@ function SkinCareScreen({ navigation }) {
                             containerStyle={Styles.drawer.margin}
                             onPress={() => navigation.toggleDrawer()}
                         />
+                    ),
+                    headerRight: () => (
+                        <Icon
+                            name="shopping-cart"
+                            type="font-awesome-5"
+                            size={Styles.values.font_title_size}
+                            color={Styles.colors.light}
+                            containerStyle={{ marginRight: 15 }}
+                            onPress={() => navigation.navigate('Cart')}
+                        />
                     )
+                }}
+            />
+            <Stack.Screen
+                name="Cart"
+                component={Cart}
+                options={{
+                    title: 'Carrito de Compras'
                 }}
             />
         </Stack.Navigator>
@@ -140,7 +192,24 @@ function HairCareScreen({ navigation }) {
                             containerStyle={Styles.drawer.margin}
                             onPress={() => navigation.toggleDrawer()}
                         />
+                    ),
+                    headerRight: () => (
+                        <Icon
+                            name="shopping-cart"
+                            type="font-awesome-5"
+                            size={Styles.values.font_title_size}
+                            color={Styles.colors.light}
+                            containerStyle={{ marginRight: 15 }}
+                            onPress={() => navigation.navigate('Cart')}
+                        />
                     )
+                }}
+            />
+            <Stack.Screen
+                name="Cart"
+                component={Cart}
+                options={{
+                    title: 'Carrito de Compras'
                 }}
             />
         </Stack.Navigator>
@@ -166,7 +235,24 @@ function OtherProductScreen({ navigation }) {
                             containerStyle={Styles.drawer.margin}
                             onPress={() => navigation.toggleDrawer()}
                         />
+                    ),
+                    headerRight: () => (
+                        <Icon
+                            name="shopping-cart"
+                            type="font-awesome-5"
+                            size={Styles.values.font_title_size}
+                            color={Styles.colors.light}
+                            containerStyle={{ marginRight: 15 }}
+                            onPress={() => navigation.navigate('Cart')}
+                        />
                     )
+                }}
+            />
+            <Stack.Screen
+                name="Cart"
+                component={Cart}
+                options={{
+                    title: 'Carrito de Compras'
                 }}
             />
         </Stack.Navigator>
@@ -192,7 +278,24 @@ function OfferScreen({ navigation }) {
                             containerStyle={Styles.drawer.margin}
                             onPress={() => navigation.toggleDrawer()}
                         />
+                    ),
+                    headerRight: () => (
+                        <Icon
+                            name="shopping-cart"
+                            type="font-awesome-5"
+                            size={Styles.values.font_title_size}
+                            color={Styles.colors.light}
+                            containerStyle={{ marginRight: 15 }}
+                            onPress={() => navigation.navigate('Cart')}
+                        />
                     )
+                }}
+            />
+            <Stack.Screen
+                name="Cart"
+                component={Cart}
+                options={{
+                    title: 'Carrito de Compras'
                 }}
             />
         </Stack.Navigator>
@@ -218,7 +321,24 @@ function NotificationsScreen({ navigation }) {
                             containerStyle={Styles.drawer.margin}
                             onPress={() => navigation.toggleDrawer()}
                         />
+                    ),
+                    headerRight: () => (
+                        <Icon
+                            name="shopping-cart"
+                            type="font-awesome-5"
+                            size={Styles.values.font_title_size}
+                            color={Styles.colors.light}
+                            containerStyle={{ marginRight: 15 }}
+                            onPress={() => navigation.navigate('Cart')}
+                        />
                     )
+                }}
+            />
+            <Stack.Screen
+                name="Cart"
+                component={Cart}
+                options={{
+                    title: 'Carrito de Compras'
                 }}
             />
         </Stack.Navigator>
@@ -244,7 +364,24 @@ function HelpScreen({ navigation }) {
                             containerStyle={Styles.drawer.margin}
                             onPress={() => navigation.toggleDrawer()}
                         />
+                    ),
+                    headerRight: () => (
+                        <Icon
+                            name="shopping-cart"
+                            type="font-awesome-5"
+                            size={Styles.values.font_title_size}
+                            color={Styles.colors.light}
+                            containerStyle={{ marginRight: 15 }}
+                            onPress={() => navigation.navigate('Cart')}
+                        />
                     )
+                }}
+            />
+            <Stack.Screen
+                name="Cart"
+                component={Cart}
+                options={{
+                    title: 'Carrito de Compras'
                 }}
             />
         </Stack.Navigator>
